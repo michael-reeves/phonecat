@@ -13,9 +13,9 @@ module.exports = function(config){
 
     autoWatch : true,
 
-    frameworks: ['jasmine'],
+    frameworks : ['jasmine'],
 
-    browsers : ['Chrome', 'Firefox'],
+    browsers : ['Chrome'],
 
     plugins : [
             'karma-chrome-launcher',
@@ -24,8 +24,8 @@ module.exports = function(config){
             ],
 
     junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
+      outputFile : 'test_out/unit.xml',
+      suite : 'unit'
     }
 
   });
