@@ -14,7 +14,7 @@ describe('PhoneCat App', function() {
     var query     = element( by.model('query') )
 
     it('should filter the phone list as a user types into the search box', function() {
-      expect( phoneList.count() ).toBe(3)
+      expect( phoneList.count() ).toBe(20)
 
       query.sendKeys( 'nexus' )
       expect( phoneList.count() ).toBe(1)
@@ -22,7 +22,7 @@ describe('PhoneCat App', function() {
       query.clear()
 
       query.sendKeys( 'motorola' )
-      expect( phoneList.count() ).toBe(2)
+      expect( phoneList.count() ).toBe(8)
     })
 
     it('should be possible to control phone order via the dropdown select box', function() {
@@ -61,6 +61,7 @@ describe('PhoneCat App', function() {
       query.sendKeys( 'nexus' )
       expect( browser.getTitle() ).toMatch( /Google Phone Gallery: nexus$/ )
     })
+
   })
 
 });
